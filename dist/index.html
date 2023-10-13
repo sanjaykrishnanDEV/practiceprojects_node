@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <div
+      class="nav z-10 fixed top-0 bg-slate-100 h-10 w-full flex place-content-between place-items-center"
+    >
+      <p
+        class="text-xl ms-3 text-black text-center md:text-start brightness-200"
+      >
+        Javascript Projects
+      </p>
+      <p
+        class="text-xl ms-3 text-black text-center brightness-400 hidden md:inline me-2"
+      >
+        Experience all Javascript Basic Concepts
+      </p>
+      <span
+        class="inline md:hidden me-2 cursor-pointer hover:animate-pulse"
+        id="hamburger"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+          />
+        </svg>
+      </span>
+    </div>
+    <!-- colorflipper -->
+    <div
+      id="colorflipper"
+      class="div p-2 m-2 mt-20 flex flex-col justify-center border-2 h-auto border-slate-200 rounded-xl"
+    >
+      <p class="text-center text-3xl">Random Color Flipper</p>
+      <div class="div flex flex-col content-center items-center">
+        <p
+          class="text-center z-0 m-[20px] bg-slate-300 p-2 rounded-xl brightness-105"
+        >
+          Background Color :<span id="clrvalue"></span>
+        </p>
+        <button
+          id="clickToChangeColor"
+          class="border-2 p-2 rounded-xl w-[150px] cursor-pointer hover:bg-red-500 hover:text-white"
+        >
+          Click Me
+        </button>
+      </div>
+    </div>
+    <!-- counter -->
+    <div
+      class="div p-2 m-2 mt-5 flex flex-col justify-center border-2 h-auto border-slate-200 rounded-xl flex flex-col content-center items-center"
+    >
+      <div class="counterhead text-3xl">Counter</div>
+      <div class="countvalue text-[4rem] m-5">
+        <span id="counterDisplay">0</span>
+      </div>
+      <div class="countfucntions flex gap-1">
+        <button
+          class="increase w-16 border-2 border-zinc-400 p-2 rounded-xl hover:bg-red-500 hover:text-white"
+          id="increase"
+        >
+          <span>-</span>
+        </button>
+        <button
+          class="reset w-18 border-2 border-zinc-400 p-2 rounded-xl hover:bg-red-500 hover:text-white"
+        >
+          <span id="reset">Reset</span>
+        </button>
+        <button
+          class="decrease w-16 border-2 border-zinc-400 p-2 rounded-xl hover:bg-red-500 hover:text-white"
+          id="decrease"
+        >
+          <span>+</span>
+        </button>
+      </div>
+    </div>
+    <!-- reviewcarousel -->
+    <div
+      class="div p-2 m-2 mt-5 flex flex-col justify-center border-2 h-auto border-slate-200 rounded-xl content-center items-center"
+    >
+      <h1 class="text-3xl">Customer reviews</h1>
+      <div class="review h-auto w-[300px] p-3 mt-4 border-2">
+        <div class="review__items align-middle w-[300px] p-4 hidden">
+          <img src="../src/user1.jpg" class="h-[200px] w-[250px]" />
+          <h1 class="text-2xl">Jonas</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+            earum!
+          </p>
+        </div>
+        <div class="review__items align-middle w-[300px] p-4 hidden">
+          <img src="../src/user2.jpg" class="h-[200px] w-[250px]" />
+          <h1>Gotham :))</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
+            expedita.
+          </p>
+        </div>
+
+        <div class="review__items align-middle w-[300px] p-4 hidden">
+          <img src="../src/user3.jpg" class="h-[200px] w-[250px]" />
+          <h1>Geek Here</h1>
+          <p>Very useful site to learn cool stuff. Improve your skills.</p>
+        </div>
+
+        <div class="review__items align-middle w-[300px] p-4 hidden">
+          <img src="../src/user4.jpg" class="h-[200px] w-[250px]" />
+          <h1>Hola</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis,
+            molestiae.
+          </p>
+
+          <p></p>
+        </div>
+
+        <div class="review__button flex justify-between">
+          <button
+            id="prev"
+            onclick="previousReview()"
+            class="bg-red-500 text-white rounded-md p-2"
+          >
+            PREV
+          </button>
+
+          <button
+            id="next"
+            onclick="nextReview()"
+            class="bg-red-500 text-white p-2 rounded-md"
+          >
+            NEXT
+          </button>
+        </div>
+      </div>
+
+      <!-- <h1 class="text-3xl">Reviews</h1>
+      <div
+        id="card"
+        class="card border-2 flex flex-col justify-center items-center"
+      >
+        <img
+          src="../src/user1.jpg"
+          alt="user1"
+          class="rounded-full mt-4 w-[100px] relative"
+        />
+        <h4 class="text-center text-2xl">John</h4>
+        <div class="review border-2 w-[300px] p-3">
+          <p>
+            Im john health get+1.Bicyle rights turmeric chances before they sold
+            out chambray pop-up.Shaman growspieces coloring book.
+          </p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button
+          type="submit"
+          id="prevReview"
+          class="bg-red-500 mt-8 p-2 rounded-xl text-white hover:bg-red-700"
+        >
+          <
+        </button>
+        <button
+          type="submit"
+          id="nextReview"
+          class="bg-red-500 mt-8 p-2 rounded-xl text-white hover:bg-red-700"
+        >
+          >
+        </button>
+      </div> -->
+    </div>
+    <!-- sidebar -->
+    <div
+      id="sidebar"
+      class="ham h-full z-50 bg-red-500 fixed top-0 left-0 w-1/2 bottom-0 hidden"
+    >
+      <div class="titles flex justify-between">
+        <h2 class="text-white text-2xl mt-10 ms-5">Javascript Projects</h2>
+        <span
+          class="text-white text-2xl mt-10 me-5 cursor-pointer"
+          id="closeSideBar"
+          >&times;</span
+        >
+      </div>
+      <ul>
+        <li class="text-white text-2xl mt-10 ms-5">Color Flipper</li>
+        <li class="text-white text-2xl mt-10 ms-5">Counter</li>
+        <li class="text-white text-2xl mt-10 ms-5">Carousel</li>
+        <li class="text-white text-2xl mt-10 ms-5">Navbar responsive</li>
+        <li class="text-white text-2xl mt-10 ms-5">Review section</li>
+      </ul>
+    </div>
+    <!-- sidebar -->
+    <!-- modal -->
+    <div
+      id="modal"
+      class="div p-2 m-2 mt-5 flex justify-center items-center border-2 h-[250px] flex-col border-slate-200 rounded-xl"
+    >
+      <h1 class="text-3xl mb-3">Model window</h1>
+      <button
+        id="openmodal"
+        class="bg-red-500 h-10 rounded-xl hover:bg-red-300 w-[300px]"
+      >
+        Click to open Modal
+      </button>
+    </div>
+    <div
+      id="modalcontent"
+      class="modalcontent border-2 border-black flex justify-center items-center flex-col fixed left-0 top-0 w-full h-full overflow-auto hidden"
+    >
+      <div class="body_model border-2 bg-blue-400 p-20">
+        <h2 class="text-white text-2xl m-4">Thanks for Opening my project</h2>
+        <button
+          id="closemodal"
+          class="bg-red-500 h-10 rounded-xl hover:bg-red-300 w-[300px]"
+        >
+          Click to close Modal
+        </button>
+      </div>
+    </div>
+    <!-- modal -->
+    <!-- Faq Accordion -->
+    <div
+      id="countdown"
+      class="div p-2 m-2 mt-5 flex justify-center items-center border-2 h-[250px] flex-col border-slate-200 rounded-xl"
+    >
+      <div
+        class="timer h-[200px] w-[80%] bg-red-400 flex flex-col items-center"
+      >
+        <h2 class="text-center text-yellow-50 text-2xl">POMODORO Timer</h2>
+        <h6
+          class="text-center text-sm text-white mt-5 underline underline-offset-2"
+        >
+          A japanese tool for Deep Focusing!!
+        </h6>
+        <span id="timer" class="text-center text-3xl m-7"></span>
+        <button class="bg-orange-50 p-3 rounded-md" id="timerbutton">
+          Start!
+        </button>
+      </div>
+    </div>
+    <!-- Faq Accordion -->
+    <!-- tabwise -->
+    <div
+      id="countdown"
+      class="div p-2 m-2 mt-5 flex justify-center items-center border-2 h-full flex-col border-slate-200 rounded-xl"
+    >
+      <h3 class="text-3xl m-5">Tab content changer</h3>
+      <div
+        class="content bg-red-400 w-[80%] h-full flex flex-col justify-center items-center"
+      >
+        <div
+          class="header bg-red-200 w-full h-10 flex justify-around items-center text-slate-800"
+        >
+          <p
+            class="hover:bg-red-400 cursor-pointer hover:pb-4 hover:rounded-t-xl p-5"
+            id="contactOne"
+          >
+            LinkedIn
+          </p>
+          <p
+            class="hover:bg-red-400 cursor-pointer hover:pb-4 hover:rounded-t-xl p-5"
+            id="contactTwo"
+          >
+            contact Number
+          </p>
+          <p
+            class="hover:bg-red-400 cursor-pointer hover:pb-4 hover:rounded-t-xl p-5"
+            id="contactThree"
+          >
+            Mail Me
+          </p>
+        </div>
+        <div
+          id="content"
+          class="content bg-lime-100 h-[150px] w-[280px] mt-5 flex flex-col justify-center items-center rounded-md brightness-100"
+        >
+          <p class="text-2xl">Sanjay</p>
+          <p>90805654954</p>
+        </div>
+      </div>
+    </div>
+    <!-- tabwise -->
+    <!-- ownlorumipsum -->
+    <div
+      id="loremipsum"
+      class="div p-2 m-2 mt-5 flex justify-center items-center border-2 h-full flex-col border-slate-200 rounded-xl"
+    >
+      <h3 class="text-3xl">Random Text generator</h3>
+      <div class="controls h-[200px] mt-10">
+        <form action="#" class="flex flex-col" id="form">
+          <label for="inputvalue">Inputvalue</label>
+          <input
+            type="number"
+            id="inputvalue"
+            class="border border-black mt-3 p-2 rounded-sm"
+          />
+          <button
+            class="bg-red-500 w-[200px] h-9 hover:bg-red-400 rounded-md mt-3"
+            id="paramaker"
+          >
+            Generate
+          </button>
+        </form>
+        <button
+          class="bg-red-500 w-[200px] h-9 hover:bg-red-400 rounded-md mt-3"
+          id="paraclear"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="generated" id="generated">
+        <p>Try Generating</p>
+      </div>
+    </div>
+    <!-- ownlorumipsum -->
+    <!-- CRUD GROCERY LIST -->
+    <div
+      id="grocerylist"
+      class="div p-2 m-2 mt-5 flex justify-center items-center border-2 h-full flex-col border-slate-200 rounded-xl"
+    >
+      <form action="#" id="groceryform">
+        <p id="alert" class="text-center"></p>
+        <h1 class="text-3xl decoration-">Grocery list</h1>
+        <!-- <label for="groceryinput"></label>
+        <input type="text" name="groceryform" id="groceryinput" class="border-2 bg-red-400 px-4 py-2 rounded-md text-black m-5 placeholder-black" placeholder="Add items">
+        <button class="bg-red-500 w-[80px] text-white h-9 hover:bg-red-400 rounded-md mt-3" id="groceryadd">Add items</button>
+        <button class="bg-red-500 w-[80px] text-white h-9 hover:bg-red-400 rounded-md mt-3" id="groceryclear">Clear</button>
+         -->
+        <div class="form-control">
+          <input
+            type="text"
+            id="grocery"
+            placeholder="eg:Milk"
+            class="m-5 border p-2"
+          />
+          <button
+            id="additemsbtn"
+            type="submit"
+            class="bg-red-500 p-2 text-white"
+          >
+            Add Item
+          </button>
+          <button
+            id="clritemsbtn"
+            type="submit"
+            class="bg-red-500 p-2 text-white"
+          >
+            Clear list
+          </button>
+        </div>
+      </form>
+      <div class="grocery-list h-auto border-2 w-[250px]" id="grocery-list">
+        <article class="flex justify-between p-2"></article>
+      </div>
+    </div>
+    <!-- CRUD GROCERY LIST -->
+
+    <!-- imgaslider -->
+    <div
+      id="imageslider"
+      class="hidden div p-2 m-2 mt-5 flex justify-center items-center border-2 h-full border-slate-200 rounded-xl flex-col"
+    >
+      <h1 class="text-3xl bg-red-500 p-2 rounded-xl">Image Carousel</h1>
+
+      <div class="slider-container h-[220px] m-2">
+        <img src="../src/img1.jpeg" alt="#" class="h-[200px]" />
+        <div class="text-center text-2xl">Sun rises in the east</div>
+      </div>
+      <div class="slider-container h-[220px] m-2">
+        <img src="../src/img2.png" alt="#" class="h-[200px]" />
+        <div class="text-center text-2xl">NO!Earth rotates</div>
+      </div>
+      <div class="slider-container h-[220px] m-2">
+        <img src="../src/img3.jpg" alt="#" class="h-[200px]" />
+        <div class="text-center text-2xl">Okay thanks!</div>
+      </div>
+
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <!-- imgaslider -->
+    <!-- rockpaperscissor -->
+    <div
+      id="game"
+      class="div p-2 m-2 mt-5 flex justify-center items-center border-2 h-full border-slate-200 rounded-xl flex-col"
+    >
+      <h3 class="text-3xl">Rock || PAPER || SCISSORS</h3>
+      <h3 class="text-3xl font-mono m-5">SCORES</h3>
+      <div class="scores flex">
+        <p class="border m-3 p-2 text-xl bg-red-300" id="comscore">
+          Computer : 0
+        </p>
+        <p class="border m-3 ms-3 p-2 text-xl bg-red-300" id="userscore">
+          User : 0
+        </p>
+      </div>
+      <div class="controls flex justify-around">
+        <div
+          id="rock"
+          class="rock m-2 rounded-full flex justify-center items-center text-white text-center h-[80px] w-[80px] bg-orange-400 cursor-pointer hover:bg-orange-500"
+        >
+          <p>Rock</p>
+        </div>
+        <div
+          id="paper"
+          class="rock m-2 rounded-full flex justify-center items-center text-white text-center h-[80px] w-[80px] bg-orange-400 cursor-pointer hover:bg-orange-500"
+        >
+          <p>Paper</p>
+        </div>
+        <div
+          id="scissor"
+          class="rock m-2 rounded-full flex justify-center items-center text-white text-center h-[80px] w-[80px] bg-orange-400 cursor-pointer hover:bg-orange-500"
+        >
+          <p>Scissor</p>
+        </div>
+      </div>
+      <div class="seelctedoptions p-4 flex flex-col text-center">
+        <!-- <p id="displaycomp">computer : </p> -->
+        <!-- <p id="displayuser">user : </p> -->
+      </div>
+      <!-- <div id="desc" class="selections text-center">
+        <p>Computer Got : </p>
+        <p>User Got : </p>
+    </div> -->
+      <button id="resetGame" class="bg-red-500 rounded-xl m-5 p-3">
+        Reset
+      </button>
+    </div>
+    <!-- rockpaperscissor -->
+    <!-- restaurantmenu -->
+    <div
+      id="hotelmenu"
+      class="div p-2 m-2 mt-5 flex justify-center items-center border-2 h-full border-slate-200 rounded-xl flex-col"
+    >
+      <h3 class="text-3xl">Hotel Shri Annapoorna</h3>
+      <h6>Since 1940</h6>
+      <div class="sessions w-full flex justify-between">
+        <h5
+          class="hover:bg-red-400 cursor-pointer p-2 rounded-xl hover:text-white"
+          id="allitems"
+        >
+          All Items
+        </h5>
+        <h5
+          class="hover:bg-red-400 cursor-pointer p-2 rounded-xl hover:text-white"
+          id="breakfast"
+        >
+          BreakFast
+        </h5>
+        <h5
+          class="hover:bg-red-400 cursor-pointer p-2 rounded-xl hover:text-white"
+          id="lunch"
+        >
+          Lunch
+        </h5>
+        <h5
+          class="hover:bg-red-400 cursor-pointer p-2 rounded-xl hover:text-white"
+          id="drinks"
+        >
+          Drinks
+        </h5>
+      </div>
+      <div
+        class="menuitems w-full h-full flex flex-wrap justify-center"
+        id="menu_item"
+      ></div>
+    </div>
+
+    <!-- restaurantmenu -->
+    <!-- navbaronscroll -->
+    <div
+      id="hotelmenu"
+      class="div p-2 m-2 mt-5 flex justify-center items-center border-2 h-full border-slate-200 rounded-xl flex-col"
+    >
+      <h3 class="text-3xl">Experience Reveal navbar on scroll>></h3>
+    </div>
+    <!-- navbaronscroll -->
+    <!-- videoplayer -->
+    <div
+      id="vicontainer"
+      class="div p-2 m-2 mt-5 flex justify-center items-center border-2 h-full border-slate-200 rounded-xl flex-col"
+    >
+      <video
+        src="../src/vid.mp4"
+        id="vid"
+        type="video/mp4"
+        class="video-container"
+        muted
+        autoplay
+        loop
+      ></video>
+      <div class="div flex">
+        <button
+          class="switch-btn-play me-5 bg-red-500 p-2 m-2 text-white rounded-md"
+          id="play"
+        >
+          play
+        </button>
+        <button
+          class="switch-btn-pause me-5 bg-red-500 p-2 m-2 text-white rounded-md"
+          id="pause"
+        >
+          <h2 class="bg-red-600">pause</h2>
+        </button>
+      </div>
+    </div>
+    <!-- videoplayer -->
+    <script src="app.js"></script>
+  </body>
+</html>
